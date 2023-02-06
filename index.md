@@ -7,7 +7,7 @@ title: Offroadents
 <head>
   <meta charset="utf-8">
   <title>{{ page.title }}</title>
-  <link rel="stylesheet" href="node_modules/photoswipe/dist/photoswipe.css">
+  <link rel="stylesheet" href='assets/css/photoswipe.css">
   <style>
     .thumbnail200 {
       width: 200px;
@@ -20,7 +20,7 @@ title: Offroadents
     const lightbox = new PhotoSwipeLightbox({
       gallery: '#my-gallery',
       children: 'a',
-      pswpModule: () => import('./node_modules/photoswipe/dist/photoswipe.esm.js')
+      pswpModule: () => import('assets/js/photoswipe-lightbox.esm.min.js')
     });
     lightbox.init();
   </script>
