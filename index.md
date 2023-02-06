@@ -16,9 +16,9 @@ title: Home
   {% for counter in (1..35) %}
 
   <div class="pswp-gallery" id="my-gallery">
-    <a href="assets/images/Offroadents - {{ counter }}.PNG" data-pswp-width="1024" data-pswp-height="1024"
+    <a href="../assets/images/Offroadents - {{ counter }}.PNG" data-pswp-width="1024" data-pswp-height="1024"
       target="_blank">
-      <img src="assets/images/Offroadents - {{ counter }}.PNG" class="thumbnail200" alt="" />
+      <img src="../assets/images/Offroadents - {{ counter }}.PNG" class="thumbnail200" alt="" />
     </a>
 
-  </div>
+  </div>gs
