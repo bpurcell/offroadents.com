@@ -1,43 +1,42 @@
 ---
-title: Home
+title: Offroadents
 ---
 
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="node_modules/photoswipe/dist/photoswipe.css">
-    <style>
-      .thumbnail200 {
-        width:200px;
-        height:200px;
-      }
-    </style>
 
-    <script type="module">
+<head>
+  <meta charset="utf-8">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="node_modules/photoswipe/dist/photoswipe.css">
+  <style>
+    .thumbnail200 {
+      width: 200px;
+      height: 200px;
+    }
+  </style>
 
-import PhotoSwipeLightbox from '../node_modules/photoswipe/dist/photoswipe-lightbox.esm.js';
-const lightbox = new PhotoSwipeLightbox({
-gallery: '#my-gallery',
-children: 'a',
-pswpModule: () => import('../node_modules/photoswipe/dist/photoswipe.esm.js')
-});
-lightbox.init();
-</script>
+  <script type="module">
+    import PhotoSwipeLightbox from '../node_modules/photoswipe/dist/photoswipe-lightbox.esm.js';
+    const lightbox = new PhotoSwipeLightbox({
+      gallery: '#my-gallery',
+      children: 'a',
+      pswpModule: () => import('../node_modules/photoswipe/dist/photoswipe.esm.js')
+    });
+    lightbox.init();
+  </script>
 
-{% for counter in (0..29) %}
+  {% for counter in (0..29) %}
 
-<div class="pswp-gallery" id="my-gallery">
-    <a href="img/Offroadents - {{ counter }}.PNG" 
-      data-pswp-width="1024" 
-      data-pswp-height="1024" 
+  <div class="pswp-gallery" id="my-gallery">
+    <a href="assets/images/Offroadents - {{ counter }}.PNG" data-pswp-width="1024" data-pswp-height="1024"
       target="_blank">
-      <img src="img/Offroadents - {{ counter }}.PNG" class="thumbnail200" alt="" />
+      <img src="assets/images/Offroadents - {{ counter }}.PNG" class="thumbnail200" alt="" />
     </a>
 
   </div>
-{% endfor %}
+  {% endfor %}
 
   </body>
+
 </html>
