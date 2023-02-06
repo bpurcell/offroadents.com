@@ -1,19 +1,7 @@
 ---
-title: Offroadents
+layout: defaults
+title: Home
 ---
-
-<html>
-
-<head>
-  <meta charset="utf-8">
-  <title>{{ page.title }}</title>
-  <link rel="stylesheet" href='assets/css/photoswipe.css'>
-  <style>
-    .thumbnail200 {
-      width: 200px;
-      height: 200px;
-    }
-  </style>
 
   <script type="module">
     import PhotoSwipeLightbox from 'assets/js/photoswipe-lightbox.esm.js';
@@ -24,8 +12,7 @@ title: Offroadents
     });
     lightbox.init();
   </script>
-</head>
-<body>
+  
   {% for counter in (1..35) %}
 
   <div class="pswp-gallery" id="my-gallery">
@@ -35,5 +22,3 @@ title: Offroadents
     </a>
 
   </div>
-  {% endfor %}
-</body>
