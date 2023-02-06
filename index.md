@@ -26,7 +26,7 @@ title: Offroadents
     lightbox.init();
   </script>
 
-  {% for counter in (0..29) %}
+  {% for counter in (1..35) %}
 
   <div class="pswp-gallery" id="my-gallery">
     <a href="assets/images/Offroadents - {{ counter }}.PNG" data-pswp-width="1024" data-pswp-height="1024"
