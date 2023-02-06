@@ -2,7 +2,6 @@
 title: Offroadents
 ---
 
-<!doctype html>
 <html>
 
 <head>
@@ -17,11 +16,11 @@ title: Offroadents
   </style>
 
   <script type="module">
-    import PhotoSwipeLightbox from '../node_modules/photoswipe/dist/photoswipe-lightbox.esm.js';
+    import PhotoSwipeLightbox from './node_modules/photoswipe/dist/photoswipe-lightbox.esm.js';
     const lightbox = new PhotoSwipeLightbox({
       gallery: '#my-gallery',
       children: 'a',
-      pswpModule: () => import('../node_modules/photoswipe/dist/photoswipe.esm.js')
+      pswpModule: () => import('./node_modules/photoswipe/dist/photoswipe.esm.js')
     });
     lightbox.init();
   </script>
