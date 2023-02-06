@@ -24,7 +24,8 @@ title: Offroadents
     });
     lightbox.init();
   </script>
-
+</head>
+<body>
   {% for counter in (1..35) %}
 
   <div class="pswp-gallery" id="my-gallery">
@@ -35,3 +36,4 @@ title: Offroadents
 
   </div>
   {% endfor %}
+</body>
