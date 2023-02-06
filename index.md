@@ -1,6 +1,12 @@
 ---
-title: My custom title
+title: Home
 ---
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
     <link rel="stylesheet" href="node_modules/photoswipe/dist/photoswipe.css">
     <style>
       .thumbnail200 {
@@ -8,48 +14,30 @@ title: My custom title
         height:200px;
       }
     </style>
-  </head>
-  <body>
-	<script type="module">
+
+    <script type="module">
+
 import PhotoSwipeLightbox from '../node_modules/photoswipe/dist/photoswipe-lightbox.esm.js';
 const lightbox = new PhotoSwipeLightbox({
-  gallery: '#my-gallery',
-  children: 'a',
-  pswpModule: () => import('../node_modules/photoswipe/dist/photoswipe.esm.js')
+gallery: '#my-gallery',
+children: 'a',
+pswpModule: () => import('../node_modules/photoswipe/dist/photoswipe.esm.js')
 });
 lightbox.init();
 </script>
 
-{% for counter in (0..9) %}
-  <!-- the stuff to be done followed by an increase in the 'counter' variable -->
-    {{ counter }}
-{% endfor %}
-
-
-# array = [1,2,3,4,5,6]
-{% for item in array limit:2 offset:2 %}
-  {{ item }}
-{% endfor %}
-# results in 3,4 
-
+{% for counter in (0..29) %}
 
 <div class="pswp-gallery" id="my-gallery">
-    <a href="img/Offroadents - 1.PNG" 
+    <a href="img/Offroadents - {{ counter }}.PNG" 
       data-pswp-width="1024" 
       data-pswp-height="1024" 
       target="_blank">
-      <img src="img/Offroadents - 1.PNG" class="thumbnail200" alt="" />
+      <img src="img/Offroadents - {{ counter }}.PNG" class="thumbnail200" alt="" />
     </a>
 
-    <a href="img/Offroadents - 1.PNG" 
-      data-pswp-width="1024" 
-      data-pswp-height="1024" 
-      target="_blank">
-      <img src="img/Offroadents - 1.PNG" class="thumbnail200" alt="" />
-    </a>
   </div>
-
-  
+{% endfor %}
 
   </body>
 </html>
