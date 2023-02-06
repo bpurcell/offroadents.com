@@ -4,11 +4,11 @@ title: Home
 ---
 
   <script type="module">
-    import PhotoSwipeLightbox from 'assets/js/photoswipe-lightbox.esm.js';
+    import PhotoSwipeLightbox from '../assets/js/photoswipe-lightbox.esm.js';
     const lightbox = new PhotoSwipeLightbox({
       gallery: '#my-gallery',
       children: 'a',
-      pswpModule: () => import('assets/js/photoswipe-lightbox.esm.min.js')
+      pswpModule: () => import('../assets/js/photoswipe-lightbox.esm.min.js')
     });
     lightbox.init();
   </script>
