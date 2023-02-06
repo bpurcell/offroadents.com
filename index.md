@@ -35,7 +35,3 @@ title: Offroadents
 
   </div>
   {% endfor %}
-
-  </body>
-
-</html>
